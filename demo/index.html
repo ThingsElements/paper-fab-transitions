@@ -8,13 +8,13 @@
         dom: 'shadow'
       };
     </script>
-    <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../../paper-styles/demo-pages.html">
     <link rel="import" href="../../paper-styles/color.html">
     <link rel="import" href="../../paper-fab/paper-fab.html">
     <link rel="import" href="../../iron-icons/iron-icons.html">
     <link rel="import" href="../../iron-icons/communication-icons.html">
-    <link rel="import" href="../../paper-menu/paper-menu.html">
+    <link rel="import" href="../../paper-listbox/paper-listbox.html">
     <link rel="import" href="../../paper-item/paper-item.html">
     <link rel="import" href="../../paper-toolbar/paper-toolbar.html">
     <link rel="import" href="../../paper-dialog/paper-dialog.html">
@@ -136,22 +136,22 @@
         <paper-fab-morph class="top-left">
           <paper-fab icon="add" class="dropdown-trigger light-blue"></paper-fab>
           <paper-material class="dropdown-content">
-            <paper-menu>
+            <paper-listbox>
               <paper-item>One</paper-item>
               <paper-item>Two</paper-item>
               <paper-item>Three</paper-item>
-            </paper-menu>
+            </paper-listbox>
           </paper-material>
         </paper-fab-morph>
 
         <paper-fab-morph class="bottom-right" vertical-align="bottom" horizontal-align="right">
           <paper-fab icon="communication:chat-bubble" class="dropdown-trigger teal"></paper-fab>
           <paper-material class="dropdown-content">
-            <paper-menu>
+            <paper-listbox>
               <paper-item>One</paper-item>
               <paper-item>Two</paper-item>
               <paper-item>Three</paper-item>
-            </paper-menu>
+            </paper-listbox>
           </paper-material>
         </paper-fab-morph>
 
