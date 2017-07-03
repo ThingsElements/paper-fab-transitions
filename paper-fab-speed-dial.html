@@ -41,23 +41,28 @@ Custom property | Description | Default
 <dom-module id="paper-fab-speed-dial">
   <template>
     <style>
-      :host .vertical ::content .dropdown-content {
+      :host .vertical ::slotted([name=dropdown-content]) {
+        display: flex;
         @apply(--layout-vertical);
       }
-      :host .horizontal ::content .dropdown-content {
+      :host .horizontal ::slotted([name=dropdown-content]) {
+        display: flex;
         @apply(--layout-horizontal);
       }
-      :host ::content .dropdown-content > * {
+      :host ::slotted([name=dropdown-content]) > * {
         margin: 8px;
         @apply(--paper-fab-speed-dial-option);
       }
     </style>
-    <content id="fabContainer" select=".dropdown-trigger"></content>
+
+    <slot id="fabContainer" name="dropdown-trigger"></slot>
+    <!--<content id="fabContainer" select=".dropdown-trigger"></content>-->
     <iron-dropdown
       id="dropdown"
       open-animation-config="[[openAnimationConfig]]"
       close-animation-config="[[closeAnimationConfig]]">
-      <content id="contentContainer" select=".dropdown-content"></content>
+      <slot id="contentContainer" name="dropdown-content"></slot>
+      <!--<content id="contentContainer" select=".dropdown-content"></content>-->
     </iron-dropdown>
   </template>
 </dom-module>
